@@ -23,6 +23,6 @@ kubectl apply -f server-deployment.yaml
 kubectl apply -f worker-deployment.yaml
 
 
-kubectl set image deployments/server-deployment server=reaaavaaahhh/multi-server:$SHA
-kubectl set image deployments/client/deployment client=reaaavaaahhh/multi-client:$SHA
-kubectl set image deployments/worker/deployment worker=reaaavaaahhh/multi-worker:$SHA
+kubectl set image deployments/server-deployment server=reaaavaaahhh/multi-server:$SHA --all
+kubectl set image deployments/client/deployment client=reaaavaaahhh/multi-client:$SHA --all
+kubectl set image deployments/worker/deployment worker=reaaavaaahhh/multi-worker:$SHA --all
