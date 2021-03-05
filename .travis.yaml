@@ -19,6 +19,7 @@ before_install:
 
 script:
   - docker run -e CI=true reaaavaaahhh/react-test npm test
+  - echo "Hello world"
 
 deploy:
   provider: script
