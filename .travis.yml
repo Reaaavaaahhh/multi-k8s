@@ -35,3 +35,7 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
+notifications:
+  email:
+    - cornelbortici@gmail.com
+   # - other@example.com
