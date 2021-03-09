@@ -16,7 +16,14 @@ before_install:
   - gcloud container clusters get-credentials cluster-1 #Setting applied in gclouc cli
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME"  --password-stdin
   - docker build -t reaaavaaahhh/react-test -f ./client/Dockerfile.dev ./client
-#Do not forget to install helm with tiller and ingress on cluster with gcloud cli
+#    curl -LO https://git.io/get_helm.sh
+#    chmod 700 get_helm.sh
+#    ./get_helm.sh    
+# Do not forget to install helm with tiller and ingress on cluster with gcloud cli
+# kubectl create serviceaccount --namespace kube-system tiller
+# kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+# helm init --service-account tiller --upgrade
+# helm install stable/nginx-ingress --name my-nginx --set rbac.create=true
 script:
   - docker run -e CI=true reaaavaaahhh/react-test npm test -- --coverage
 

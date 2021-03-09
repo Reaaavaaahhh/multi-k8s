@@ -1,6 +1,6 @@
-docker build -t reaaavaaahhh/multi-client:latest -t reaaavaaahhh/multi-client:$SHA -f ./client/Dockerfile ./client
-docker build -t reaaavaaahhh/multi-server:latest -t reaaavaaahhh/multi-server:$SHA -f ./server/Dockerfile ./server
-docker build -t reaaavaaahhh/multi-worker:latest -t reaaavaaahhh/multi-worker:$SHA -f ./worker/Dockerfile ./worker
+docker build -t reaaavaaahhh/multi-client:latest -t reaaavaaahhh/multi-client:$SHA -f ./client/Dockerfile ./client --no-cache
+docker build -t reaaavaaahhh/multi-server:latest -t reaaavaaahhh/multi-server:$SHA -f ./server/Dockerfile ./server --no-cache
+docker build -t reaaavaaahhh/multi-worker:latest -t reaaavaaahhh/multi-worker:$SHA -f ./worker/Dockerfile ./worker --no-cache
 docker push reaaavaaahhh/multi-client:latest
 docker push reaaavaaahhh/multi-server:latest
 docker push reaaavaaahhh/multi-worker:latest
