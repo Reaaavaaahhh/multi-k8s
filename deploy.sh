@@ -13,7 +13,7 @@ kubectl apply -f client-cluster-ip-service.yaml
 kubectl apply -f client-deployment.yaml
 kubectl apply -f database-persistent-volume-claim.yaml
 kubectl apply -f ingress-service.yaml
-kubectl apply -f nginx-ingress-controller.yaml
+# kubectl apply -f nginx-ingress-controller.yaml
 kubectl apply -f postgres-cluster-ip-service.yaml
 kubectl apply -f postgres-deployment.yaml
 kubectl apply -f redis-cluster-ip-service.yaml
